@@ -11,6 +11,10 @@ defmodule Distance do
     
   end
 
+  def point_inside_circle?(point, {:circle, center, radius}) do
+    distance(point, center) <= radius
+  end
+
 end
 
 ExUnit.start()
@@ -20,8 +24,8 @@ defmodule DistanceTest do
   import Distance
 
   test "distance" do
-    assert distance({:point, 10, 10}, {:point, 40, 50}) == 50
-    assert distance({:point, 0, 0}, {:point, 3, 4}) == 5
-    assert distance({:point, 0, 0}, {:point, 0, 100}) == 100
+    assert distance({:point, 10, 10}, {:point, 40, 50}) == 50.0
+    assert distance({:point, 0, 0}, {:point, 3, 4}) == 5.0
+    assert distance({:point, 0, 0}, {:point, 0, 100}) == 100.0
   end
 end
