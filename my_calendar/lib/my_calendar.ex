@@ -20,5 +20,25 @@ defmodule MyCalendar do
     T.Event.new("weakly teeam meeting", place, time, participants, agenda)
   end
 
+  def sample_event_map() do
+    alias MyCalendar.Model.EventMap, as: M
+
+    place = M.Place.new("Office #1", "Room 42")
+    time = ~U[2024-07-05 15:00:00Z]
+    participants = [
+      M.Participant.new("Bob", :projectmanager),
+      M.Participant.new("Petr", :developer),
+      M.Participant.new("Kate", :qa),
+      M.Participant.new("Helen", :devops)
+    ]
+    agenda = [
+      M.Topic.new("Interview", "Candidate for developer position"),
+      M.Topic.new("Weather", "Discuss weather"),
+      M.Topic.new("Cookies", "Discuss what to buy")
+    ]
+
+    M.Event.new("weakly teeam meeting", place, time, participants, agenda)
+  end
+
 end
 
