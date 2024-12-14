@@ -4,4 +4,12 @@ defmodule MyCalendar.Model.EventStruct do
     defstruct [:office, :room]     
   end
 
+  defmodule Topic do
+     defstruct [
+      :title,
+      :description,
+      {:priority, :medium}
+    ] 
+   end 
+
 end
