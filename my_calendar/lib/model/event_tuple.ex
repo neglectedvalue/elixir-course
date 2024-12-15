@@ -1,5 +1,4 @@
 defmodule MyCalendar.Model.EventTuple do
-  
   defmodule Place do
     def new(office, room) do
       {:place, office, room}
@@ -23,5 +22,4 @@ defmodule MyCalendar.Model.EventTuple do
       {:event, title, place, time, participants, agenda}
     end
   end
-
 end

@@ -1,5 +1,4 @@
 defmodule MyCalendar.Model.EventMap do
-  
   defmodule Place do
     def new(office, room) do
       %{
@@ -38,10 +37,8 @@ defmodule MyCalendar.Model.EventMap do
       }
     end
 
-    def add_participant(event, pariticpant) do
+    def add_participant(event, participant) do
       Map.update(event, :participants, [], fn ps -> [participant | ps] end)
     end
-
   end
-
 end
