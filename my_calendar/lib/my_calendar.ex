@@ -1,5 +1,4 @@
 defmodule MyCalendar do
-  alias Mix.SCM
   def sample_event_tuple() do
     alias MyCalendar.Model.EventTuple, as: T
 
